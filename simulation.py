@@ -6,7 +6,9 @@ physicsClient = bullet.connect(bullet.GUI)
 bullet.setAdditionalSearchPath(pybullet_data.getDataPath())
 bullet.setGravity(0,0,-9.8)
 planeId = bullet.loadURDF("plane.urdf")
-bullet.loadSDF("boxes.sdf")
+#robotId = bullet.loadURDF("body.urdf")
+robotId2 = bullet.loadURDF("body2.urdf")
+bullet.loadSDF("world.sdf")
 
 while True:
   bullet.stepSimulation()
